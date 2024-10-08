@@ -9,14 +9,16 @@ public class Task1 {
    // countEvens([2, 1, 2, 3, 4]) → 3 countEvens([2, 2, 0]) → 3 countEvens([1, 3, 5]) → 0
 
     private static int evenNumber(int[]arr){
-        int count = 0;
-        int[]newArray = Arrays.stream(arr).toArray();
-        for (int i = 0; i < newArray.length; i++) {
-            if (newArray[i] % 2 == 0){
-                count++;
-            }
-        }
-        return count;
+        return (int) Arrays.stream(arr).filter(i->i %2 == 0).count();
+
+//        int count = 0;
+//        int[]newArray = Arrays.stream(arr).toArray();
+//        for (int i = 0; i < newArray.length; i++) {
+//            if (newArray[i] % 2 == 0){
+//                count++;
+//            }
+//        }
+//        return count;
     }
 }
 
